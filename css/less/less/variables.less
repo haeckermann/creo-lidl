@@ -1,0 +1,97 @@
+
+// -----------------------------------------------
+// variables
+// -----------------------------------------------
+
+@imgPath:'../images/css';
+@fontPath:'../fonts'; 
+@trebuchet:"Trebuchet MS", Arial, Helvetica, sans-serif;
+@verdana:Verdana;
+@ften:0.65rem;
+
+@baseSpacing:10px;
+@baseSpacingBig:45px;
+@baseTextShadow:0 1px 1px rgba(0,0,0,0.5);
+
+@baseBorderRadius:4px;
+@baseBoxShadow:0 0 3px rgba(0,0,0, 0.3);
+@baseBoxShadowBig: 0 0 8px rgba(0, 0, 0, 0.2);
+@transitionColor:color .3s ease-out;
+@transitionAll:all .3s ease-out;
+
+
+
+
+// colors
+
+
+// -----------------------------------------------
+// BREAKPOINTS
+// -----------------------------------------------
+
+@mediaBreakpointTablet:800px;
+@mediaBreakpointPhoneLandscape:600px;
+@mediaBreakpointPhonePortrait:400px;
+
+// -----------------------------------------------
+// GlOBAL VARIABLES
+// -----------------------------------------------
+ 
+@HtmlBg: #fff;
+@BodyBg: none;
+@ContentBg: #FFF;
+@PageWidth: 1024px;
+
+// Colors
+
+@cW:#fff;
+@cWh:#c7ae8b;
+@GlobalTxtColor: #303030;
+@GlobalLinkColor: #999999;
+@GlobalLinkColorHover:#61C998;
+@GlobalHighligtColor: #1576ba;
+@GlobalHighligtColorHover: #61C998;
+@GlobalBorderColor: #E9E9E9;
+
+
+
+// -----------------------------------------------
+// HEADER VARIABLES
+// -----------------------------------------------
+
+@HeaderBg: none;
+@HeaderOuterBg: #FFF; //Optional
+
+//Logo
+@logoHeight: 58px; //Needed for Ratio
+@logoWidth: 235px; //Needed for Ratio
+@logoMaxWidth: 240px;
+
+
+
+
+
+// -----------------------------------------------
+// MIXINS
+// -----------------------------------------------
+
+.resetMarginFirstChild(){
+    &:first-child{
+        margin: 0;
+    }
+}
+
+
+
+
+
+@-:100%;
+.ratioY(@w, @h){
+	@-: unit((@h/@w)*100,~"%");
+}
+//Beispiel= height:@-;.ratioY(473px,84px);
+
+
+// -----------------------------------------------
+// give it to me
+// -----------------------------------------------

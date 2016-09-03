@@ -1,0 +1,269 @@
+.art_box {
+		&:hover{
+			border-color:#fff;
+		}
+		.title{
+			display: block;
+			min-height: 64px;
+			padding-top: 11px;
+			position: absolute;
+			top: 0;
+		
+			h3, h4{
+				color:#461d11;
+				padding:0 12px;
+			}
+			h3{
+				font:bold 0.75rem/0.75rem @trebuchet;
+				&.f_title {
+					padding:5px;
+					background:#fff;
+					margin-left:11px;
+				}
+			}
+			h4{
+				font:normal @ften/@ften @verdana;
+			}
+		}
+		figure{
+			border:1px solid #fff;
+		}
+		figcaption {
+			padding:0 5px;
+			background:#471D11;
+			border-top:1px solid #fff; 
+			display:table;
+			width:100%;
+				.details {
+					width:50%;
+					display:block;
+					float:left;
+					vertical-align:top;
+					border-left:1px dotted @cWh; 
+				}
+				.text{
+					width:50%;
+					display:block;
+					float:left;
+					vertical-align:top;
+					font-family:@trebuchet;
+					font-size:@ften;
+					color:@cWh;
+					padding:6px 0 3px;
+					.space{
+						text-indent:20px;
+						text-align:center;
+						span{
+							color:#fff;
+							font-size:0.75rem;
+						}
+					}
+					p{
+						text-align:center;
+						padding:0 30px;
+						span{
+							color:#fff;
+							font-size:0.75rem;
+						}
+					}
+				}
+				.ziffer{
+					width:100%;
+					display:block;
+					vertical-align:top;
+					float:left;
+					.two {
+						width:50%;
+						display:block;
+						float:left;
+						padding:6px 0 3px;
+					}
+				}
+				.price {
+					color:#fff;
+					width:100%;
+					display:block;
+					float:none;
+					font-size:1.5rem;
+					display:block;
+					width:100%;
+					text-align:center;
+					font-family:@trebuchet;
+					.euro,
+					.ziffer {
+						display: inline-block;
+						padding: 0 1px;
+						vertical-align: top;
+					 }
+					.tax {
+						font-family: @trebuchet;
+						font-style: italic;
+						font-weight: bold;
+						vertical-align: top;
+						color:@cWh;
+						font-size:0.6rem;
+						display:block;
+						width:100%;
+						text-align:center;
+						clear:both;
+					}
+				}
+				.two {
+					border-right:1px dotted @cWh;
+					padding:6px 5px 4px;
+					&:last-child {
+						border-right:0 none;
+					}
+				}
+				.shippmenttime {
+					&:before {
+						content:'\e805';
+					}
+				}
+				.shippmentprice {
+					&:before {  
+						content:'\e808';
+					} 
+				}
+				.info {
+					font-size:@ften;
+					display:block;
+					width:100%;
+					text-align:center;
+					font-family:@trebuchet; 
+					position:relative;
+					span {
+						margin-left:20px;
+					}
+					&:before {
+						font-family:"me";
+						display:block;
+						width:20px;
+						font-size:0.9375rem; 
+						position:absolute;
+						color:#C6AE8C;
+						
+					}
+				}
+		}
+}
+
+@media only screen and (max-width: @mediaBreakpointTablet) {
+	.art_box {
+		
+		.title{
+			
+			position: relative;
+			background:#fff;
+			margin-bottom:-20px;
+			
+			h3.f_title{
+				text-align:center;
+				font-size:1.1rem;				
+			}
+			
+			
+		}
+	}
+
+
+	.art_box figcaption {
+		.text{
+			.space{
+				text-indent:0px;
+				text-align:center;
+			}
+			p{
+				text-align:center;
+				padding:0 10px;
+				span{
+					color:#fff;
+					font-size:0.75rem;
+				}
+			}
+		}
+
+		.two {
+			width:90%;
+			border:0 none;
+			margin-left:5%;
+			.info {
+				display:block;
+				float: none;
+				width: 100%;
+				&:before{
+					position:absolute;
+					left:50%;
+					margin-left:-50px;
+				}
+				
+				span {
+					margin-left:0px;
+				}
+			}
+			.price {
+				margin-top:5px;
+				padding-top:9px;
+				border-top:1px solid #fff;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: @mediaBreakpointPhoneLandscape) {
+	.sixsix {
+		float:none !important;
+		margin: 12px auto 0 !important;
+		max-width: 423px;
+		width: 100% !important;
+	}
+	.art_box {
+		&.three {
+				.title{
+					margin-bottom:-40px;
+				}
+			}
+		figcaption {
+			.two:last-child {padding-top:0;}
+			.text,
+			.details {
+				width:100%;
+				text-align:center;
+			}
+			
+			.details{
+				border-left:0 none;
+			}
+		}
+	}
+	.link {
+		position:static;
+	}
+	.content {
+		&.c_title {
+			a.link {
+				position:static !important;
+				min-width:100%;
+				text-align:center;
+				display:block;
+				margin-bottom:10px;
+			}
+			h1{
+				text-align:center;
+			}
+		}
+	}
+	.articles .three {
+		text-align: center;
+		width: 50%;
+		margin-left:25%;
+	}
+}
+
+@media only screen and (max-width: @mediaBreakpointPhonePortrait) {
+	.art_box.three {
+		.title{
+			margin-bottom:-40px;
+		}
+	}
+}

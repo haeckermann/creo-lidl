@@ -1,0 +1,156 @@
+// Marke Eins Font 
+// .icon-down-dir:before { content: '\e800'; } /* '' */
+// .icon-search:before { content: '\e801'; } /* '' */
+// .icon-right-dir:before { content: '\e802'; } /* '' */
+// .icon-left-dir:before { content: '\e803'; } /* '' */
+// .icon-up-dir:before { content: '\e804'; } /* '' */
+// .icon-switch:before { content: '\e805'; } /* '' */
+// .icon-circle-empty:before { content: '\e806'; } /* '' */
+// .icon-right-open:before { content: '\e807'; } /* '' */
+ 
+ 
+ 
+ 
+ html{
+background:#70432E;
+}
+
+html, body{
+    min-height: 100%;
+    height: 100%;
+} 
+
+body *, *:after, *:before {
+    .box-sizing(border-box);
+}
+
+body{
+    color:@cW;
+	font:normal 1rem/1.2rem Verdana, Geneva, sans-serif; 
+	background:url(../images/bg.jpg) repeat-x top;
+	
+}
+
+.container{
+	width:1024px;
+	margin:0 auto;
+	padding: 0 32px;
+	box-shadow:0 0 1px 1px;
+	height:100%;
+}
+
+
+.inner {
+    margin: 0 auto;
+    max-width: 100%;
+	width:100%; 
+    padding: 0;
+    position: relative;
+}
+
+nav {
+	width:436px;
+	display:inline-block;
+	vertical-align:top;
+}
+
+
+img{
+    max-width: 100%;
+}
+
+
+strong{
+    font-weight: 700;
+}
+
+a{
+    text-decoration: none;
+    color: @cW;
+    .transition(@transitionAll);
+	outline:none !important;
+
+    &:hover{
+        color: @cWh;
+    }
+	&:active, &:visited, &:link{
+		outline:none !important;
+	}
+}
+
+
+.hidden{ display:none;}
+
+// alle die nav ul
+nav {
+    ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li{
+        float: left;
+    }
+}
+
+// hier habe ich die helpers geschreiben
+
+.cf, .clear{
+    .clearfix();
+}
+
+.ir{
+    .ir();
+}
+
+// layout
+.inner{
+
+    position: relative;
+    .cf;
+}
+
+.btn {
+	 	
+
+}
+
+.row{
+    .cf;
+}
+
+.col{
+    float: left;
+    padding: 0 @baseSpacing;
+    .resetMarginFirstChild();
+
+    &.one{
+        width:100%;
+    } 
+
+    &.two{
+        width: 50%;
+    }
+
+    &.three{
+        width: 33%;
+    }
+}
+
+
+
+.br{height:0px; line-height:0px; clear:both;}
+
+aside{
+    width: 30%;
+    float: right;
+    padding: 0 @baseSpacing*2 0 0;
+    margin: 0 0 @baseSpacing*2;
+}
+
+#center{
+    float: left;
+    width: 70%;
+    .cf;
+}
